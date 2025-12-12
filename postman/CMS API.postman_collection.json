@@ -1,0 +1,945 @@
+{
+	"info": {
+		"_postman_id": "3e360b18-bb82-4ceb-bbf8-c6b5afaa60b7",
+		"name": "CMS API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47394614",
+		"_collection_link": "https://mgazikb-48955.postman.co/workspace/KB-MGAZI's-Team's-Workspace~059ed961-3e82-4d52-80ad-9a09f510f2d2/collection/47394614-3e360b18-bb82-4ceb-bbf8-c6b5afaa60b7?action=share&source=collection_link&creator=47394614"
+	},
+	"item": [
+		{
+			"name": "CardCreate",
+			"item": [
+				{
+					"name": "ClientCreate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John\",\r\n  \"surname\": \"Doe\",\r\n  \"id_number\": \"9005151234087\",         \r\n  \"date_of_birth\": \"1990-05-15\",      \r\n  \"gender\": \"Male\",\r\n  \"address\": {\r\n    \"country\": \"South Africa\",\r\n    \"province\": \"Gauteng\",\r\n    \"city\": \"Johannesburg\",\r\n    \"street\": \"123 Main Street\",\r\n    \"postal_code\": \"2000\"             \r\n  },\r\n  \"work_address\": {                    \r\n    \"country\": \"South Africa\",\r\n    \"province\": \"Gauteng\",\r\n    \"city\": \"Johannesburg\",\r\n    \"street\": \"456 Business Road\",\r\n    \"postal_code\": \"2001\"              \r\n  },\r\n  \"income\": 45000,\r\n  \"tax_number\": \"1234567890\"           \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/client/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"client",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountCreate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client_id\": \"CL-59946\",\r\n  \"product_code\": \"CHQ-01\",\r\n  \"dateOpened\": \"2025-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/account/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardCreate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "Application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account_number\": \"24653440648\",\r\n    \"product_code\": \"CHQ-01\",\r\n    \"emboss_name\": \"KB MGAZI\",  \r\n    \"limit_amount\": 30000       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/card/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"card",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardStatusCheck",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/card/check-status/:exid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"card",
+								"check-status",
+								":exid"
+							],
+							"variable": [
+								{
+									"key": "exid",
+									"value": "8477552233923376"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardActivation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"exId\": \"5918182883662325\",\r\n  \"cvv\": \"441\",\r\n  \"expiry\": \"12/29\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/card/activate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"card",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardReissue",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"external_id\": \"8477552233923376\",\r\n  \"reason_code\": \"LOST\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/card/reissue",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"card",
+								"reissue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardStatusChange",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"external_id\": \"8477552233923376\",\r\n  \"block_code\": \"_\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/card/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"card",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/card/4101260645745172435645874257",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"card",
+								"4101260645745172435645874257"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardAccountDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/account/:account_number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"account",
+								":account_number"
+							],
+							"variable": [
+								{
+									"key": "account_number",
+									"value": "45367686456atsdghtjh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClientDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/client/:client_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"client",
+								":client_id"
+							],
+							"variable": [
+								{
+									"key": "client_id",
+									"value": "CL-599"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PinManagement",
+			"item": [
+				{
+					"name": "PinSet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"external_id\": \"6849327523865948\",\r\n    \"clear_pin\": \"2345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/pin/set",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"pin",
+								"set"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PinChange",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"external_id\": \"6849327523865948\", \r\n\"current_pin_block\": \"A1235\", \r\n\"new_clear_pin\": \"7891\"\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/pin/change",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"pin",
+								"change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PinVerify",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"external_id\": \"238946236523868385\", \r\n    \"current_pin_block\": \"A0755\" \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/pin/verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"pin",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DataManagement",
+			"item": [
+				{
+					"name": "ClientUpdate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"client_id\": \"CL-13466542sx\", \r\n    \"name\": \"Sarah\", \r\n    \"surname\": \"Mgazi\", \r\n     \"id_number\": \"09121256654709\", \r\n    \"date_of_birth\": \"2000-12-31\", \r\n    \"gender\": \"Female\", \r\n    \"income\":\"200000\", \r\n    \"tax_number\":\"325923560\" \r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update/updateClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"updateClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountUpdate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"account_number\":\"656eryfdh\", \r\n    \"product_code\":\"SAV-02\", \r\n    \"dateOpened\":\"2025-12-03\" \r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update/updateAccountContract",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"updateAccountContract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CardUpdate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\r\n\"exid\":\"9471509476390728\", \r\n\"product_code\":\"SAV-02\", \r\n\"emboss_name\":\"KB MGAZI\", \r\n\"limit_amount\":\"60000\" \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update/updateCardContract",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"updateCardContract"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorisation",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BEARER_sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transaction_type\":\"VOUCHER_PAYMENT\",\r\n    \"external_id\":\"0377092673389019\",\r\n    \"amount\":\"7\",\r\n    \"currency_code\":\"ZAR\",\r\n    \"recipient_id\":\"AUTH_005\",\r\n    \"country_code\":\"ZA\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/auth/authorize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FundTopUp",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk_test_hfsf473475297rfgewgsfd473r5823rlgfg47",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer SK_TOKEN",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account_number\":\"24653440648\", \r\n    \"amount\":\"5000\", \r\n    \"currency_code\":\"ZAR\" \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/funds/depositFunds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"funds",
+								"depositFunds"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
