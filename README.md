@@ -1,11 +1,59 @@
-💳 Card Management System — API Testing (E2E QA)This repository contains end-to-end API testing resources and supporting mock servers for the Card Management System (CMS) project.🛠️ Contentsmock-server: Lightweight Express-based mock endpoints used during API testing to simulate CMS services.postman/CMS API.postman_collection.json: Postman collection for manual API exploration and smoke https://www.google.com/search?q=tests.sql: Database schema and related helpers used by automated https://www.google.com/search?q=tests.tests: Automated test suites and test management artifacts.docs/Test Logs: Folders with recorded test logs and artifacts from previous runs.✅ PrerequisitesTo set up and run the https://www.google.com/search?q=tests and mock servers, you will need:Node.js (v16+) and npm installed.Optional: MySQL server if you run https://www.google.com/search?q=tests that require interaction with a real database.🚀 Quick SetupClone the repository:PowerShellgit clone https://github.com/kbmgazi/Project---02-_-Card_Management_System-API-Testing.git
-cd Project---02-_-Card_Management_System-API-Testing
-Install mock server dependencies:PowerShellcd mock-server
-npm install
-(Optional) Install SQL helper dependencies:PowerShellcd ..\sql
-npm install
-🏃 Running the Mock Server ModulesThe mock-server directory contains several small Node.js modules that emulate specific CMS APIs (e.g., Authorization, Card Creation, etc.).There is no central launcher script; you must run the specific mock module(s) required for your https://www.google.com/search?q=tests using Node.Examples:PowerShellnode mock-server/authorisation.js
+# 💳 Card Management System — API Testing (E2E QA)
+
+This repository contains end-to-end API testing resources and supporting mock servers for the Card Management System (CMS) project.
+
+## 🛠️ Contents
+
+* **[`mock-server`](mock-server)**: Lightweight Express-based mock endpoints used during API testing to simulate CMS services.
+* **[`postman/CMS API.postman_collection.json`](postman/CMS%20API.postman_collection.json)**: Postman collection for manual API exploration and smoke tests.
+* **[`sql`](sql)**: Database schema and related helpers used by automated tests.
+* **[`tests`](tests)**: Automated test suites and test management artifacts.
+* **[`docs/Test Logs`](docs/Test%20Logs)**: Folders with recorded test logs and artifacts from previous runs.
+
+---
+
+## ✅ Prerequisites
+
+To set up and run the tests and mock servers, you will need:
+
+* **Node.js (v16+)** and **npm** installed.
+* *Optional:* **MySQL server** if you run tests that require interaction with a real database.
+
+## 🚀 Quick Setup
+
+1.  **Clone the repository:**
+
+    ```powershell
+    git clone [https://github.com/kbmgazi/Project---02-_-Card_Management_System-API-Testing.git](https://github.com/kbmgazi/Project---02-_-Card_Management_System-API-Testing.git)
+    cd Project---02-_-Card_Management_System-API-Testing
+    ```
+
+2.  **Install mock server dependencies:**
+
+    ```powershell
+    cd mock-server
+    npm install
+    ```
+
+3.  **(Optional) Install SQL helper dependencies:**
+
+    ```powershell
+    cd ..\sql
+    npm install
+    ```
+
+---
+
+## 🏃 Running the Mock Server Modules
+
+The `mock-server` directory contains several small Node.js modules that emulate specific CMS APIs (e.g., Authorization, Card Creation, etc.).
+
+There is no central launcher script; you must run the specific mock module(s) required for your tests using Node.
+
+### Examples:
+
+```powershell
+node mock-server/authorisation.js
 node mock-server/CardCreate.js
 node mock-server/dataManagement.js
 node mock-server/pinManagement.js
-🗺️ Using the Postman CollectionImport postman/CMS API.postman_collection.json into Postman.Use the collection to explore endpoints, run manual flows, and execute smoke https://www.google.com/search?q=tests before automated runs.📝 Tests & LogsAutomated test suites are located under the tests directory.Review docs/Test Logs for archived outputs, examples of previous test runs, and artifacts.🏗️ Project Structure (High Level)DirectoryPurposemock-server/Mock API endpoints to simulate CMS servicespostman/Postman collections for manual testingsql/DB schema and SQL helpers for test setup/teardowntests/Automated test suites and test managementdocs/Test Logs/Archived test logs and artifacts🤝 ContributingOpen issues and Pull Requests (PRs) against this repository.When adding new https://www.google.com/search?q=tests, please include clear steps to reproduce and document any required environment setup.⚖️ License & ContactsNo formal license file is included in this repository.Contact the repository owner for license and usage terms: https://github.com/kbmgazi
